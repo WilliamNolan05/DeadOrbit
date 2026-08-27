@@ -1,0 +1,70 @@
+{
+  "$schema": "/etc/xdg/swaync/configschema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "text-empty": "NO ALERTS",
+  "cssPriority": "user",
+  "control-center-width": 450,
+  "control-center-height": 550,
+  "fit-to-screen": true,
+  "notification-grouping": false,
+
+  "notification-window-width": 400,
+  "notification-icon-size": 0,
+  "notification-body-image-height": 0,
+  "notification-body-image-width": 0,
+
+  "timeout": 3,
+  "timeout-low": 2,
+  "timeout-critical": 6,
+  "hide-on-clear": false,
+  "transition-time": 0,
+  "image-visibility": "never",
+
+  "widgets": [
+    "buttons-grid",
+    "dnd",
+    "mpris",
+    "volume",
+    "title",
+    "notifications"
+  ],
+
+"widget-config": {
+    "title": {
+      "text": "ALERTS",
+      "clear-all-button": true,
+      "button-text": "ERASE"
+    },
+    "mpris": {
+      "image-size": 45,
+      "image-radius": 0,
+      "autohide": true,
+      "blur": false
+    },
+    "dnd": {
+      "text": "DO NOT DISTURB"
+    },
+    "volume": {
+      "label": "VOL",
+      "show-per-app": false
+    },
+    "buttons-grid": {
+      "buttons-per-row": 3,
+      "actions": [
+        {
+          "label": "SLEEP",
+          "command": "systemctl suspend"
+        },
+        {
+          "label": "REBOOT",
+          "command": "systemctl reboot"
+        },
+        {
+          "label": "POWER OFF",
+          "command": "systemctl poweroff"
+        }
+      ]
+    }
+  }
+}

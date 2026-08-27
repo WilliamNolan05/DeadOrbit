@@ -1,0 +1,180 @@
+@import "colors/colors.css";
+
+/* 1. Global Reset & Font Configuration */
+* {
+    all: unset;
+    font-family: "Terminus", monospace;
+    font-weight: 700;
+
+    --border-radius: 0px;
+    --border-radius-s: 0px;
+    --border-radius-xl: 0px;
+    --shadow: none;
+}
+
+/* 2. Base Control Center Window */
+.control-center {
+    background: @center-bg;
+    border-radius: var(--border-radius);
+    margin: 5px;
+    padding: 5px;
+}
+
+/* 3. Force Notification Widget & List to Anchor to TOP */
+.widget-notifications {
+    margin: 0;
+    padding: 0;
+}
+
+.control-center list {
+    background: transparent;
+}
+
+.control-center .notification-row {
+    margin: 4px 0;
+    padding: 0;
+}
+
+/* 4. Hide empty bell placeholder and icon graphic */
+.control-center-list-placeholder {
+    display: none;
+    opacity: 0;
+}
+
+label.placeholder {
+    display: none;
+    opacity: 0;
+}
+
+/* 5. Notification Card Layout */
+.notification {
+    padding: 0;
+}
+
+.notification-background {
+    background: @center-notification-bg;
+    border-radius: var(--border-radius);
+    margin: 2px 0;
+    padding: 8px;
+}
+
+.notification-icon,
+.notification-group-icon {
+    display: none;
+}
+
+.notification-content {
+    color: @text;
+    margin: 0;
+    font-weight: 700;
+}
+
+.notification-content .summary {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: @text;
+    padding: 0;
+    margin-bottom: 2px;
+}
+
+.notification-content .body {
+    color: @text-alt;
+    font-size: 0.85rem;
+}
+
+.notification-content .time {
+    padding: 0;
+    font-size: 0.8rem;
+    color: @text-alt;
+}
+
+/* 6. Widget Styles */
+.widget {
+    margin: 5px 0;
+    color: @text;
+}
+
+/* Do Not Disturb Widget Header */
+.widget-dnd {
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    background: @background-alt;
+    color: @text;
+}
+
+.widget-dnd > label {
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.widget-dnd switch {
+    background: @hover;
+    border-radius: var(--border-radius-s);
+    padding: 2px;
+}
+
+.widget-dnd switch slider {
+    background: @text;
+    border-radius: var(--border-radius-s);
+}
+
+.widget-dnd switch:checked {
+    background-color: @selected;
+}
+
+/* Action Buttons Grid Footer */
+.widget-buttons-grid {
+    border-radius: var(--border-radius);
+    padding: 5px;
+    margin-top: 5px;
+    background: @background-alt;
+}
+
+.widget-buttons-grid button {
+    padding: 8px;
+    margin: 2px;
+    min-width: 2rem;
+    background: @hover;
+    border-radius: var(--border-radius);
+}
+
+.widget-buttons-grid button > label {
+    font-family: "CaskaydiaCove Nerd Font Propo", "Terminus", monospace;
+    font-size: 16px;
+    color: @text;
+}
+
+.widget-buttons-grid button:hover {
+    background: @selected;
+}
+
+.widget-buttons-grid button:checked {
+    background-color: @text;
+}
+
+.widget-buttons-grid button:checked > label {
+    color: @background;
+}
+
+/* MPRIS Media Player */
+.widget-mpris {
+    border-radius: var(--border-radius);
+    background: @background-alt;
+    padding: 5px;
+}
+
+.widget-mpris-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 3px;
+}
+
+.widget-mpris-subtitle {
+    color: @text-alt;
+    font-size: 0.85rem;
+    margin: 0 3px;
+}
+
+.blank-window {
+    background: transparent;
+}

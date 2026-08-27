@@ -1,0 +1,43 @@
+[mgr]
+cwd = { fg = "#77cc00", bold = true }
+border_style = { fg = "#d4be98" }
+
+[indicator]
+current = { fg = "#000000", bg = "#8d0404", bold = true }
+preview = { fg = "#000000", bg = "#d4be98", bold = true }
+
+[filetree]
+folder = { fg = "#cc0000", bold = true }
+file = { fg = "#c0c0c0" }
+exec = { fg = "#ff5555", bold = true }
+
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+mode_normal     = { fg = "#000000", bg = "#ffffff", bold = true }
+mode_select     = { fg = "#000000", bg = "#ffffff", bold = true }
+mode_unset      = { fg = "#000000", bg = "#ffffff", bold = true }
+
+# Force directory and file colors directly via filetype rules
+[[filetype.rules]]
+mime = "inode/directory"
+fg = "#77cc00"
+bold = true
+
+[[filetype.rules]]
+mime = "image/*"
+fg = "#d4be98"
+
+[icon]
+dirs  = []
+files = []
+exts  = []
+conds = [
+  { if = "hidden & dir",  text = "HDIR",  fg = "#80335a" },  #dotfiles
+  { if = "link",          text = "LINK",  fg = "#94a87b" },  #symlinks
+  { if = "orphan",        text = "DEAD",  fg = "#638ab0" },  #broken symlinks
+  { if = "exec & !dir",          text = "EXEC",  fg = "#77cc00" },  
+  { if = "dir",           text = "DIR",   fg = "#64784b" }, 
+  { if = "!dir",          text = "FILE",  fg = "#a08a63" },
+]
+

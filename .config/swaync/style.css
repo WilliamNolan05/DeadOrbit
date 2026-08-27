@@ -1,0 +1,231 @@
+/* 1. Global Reset */
+* {
+    all: unset;
+    font-family: "Terminus", monospace;
+    font-weight: 700;
+    --border-radius: 0px;
+}
+
+/* 2. Outer Control Center - Zero out padding/margins to eliminate the sub-pixel overflow */
+.control-center {
+    background: #000000;
+    border: 1px solid #152015;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Disable scrolling on the top-level GTK container entirely */
+.control-center > contents {
+    padding: 8px;
+}
+
+/* 3. Title Widget - Fixed top section */
+.widget-title {
+    background: #000000;
+    padding: 8px 8px 6px 8px;
+    border-bottom: 1px solid #282828;
+}
+
+.widget-title label {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ebdbb2;
+}
+
+.widget-title button {
+    color: #a89984;
+    font-size: 0.85rem;
+    padding: 2px 6px;
+}
+
+.widget-title button:hover {
+    color: #fb4934;
+}
+
+/* 4. Notification List Area */
+.control-center-list {
+    background: transparent;
+    padding: 4px 8px;
+}
+
+.control-center-list viewport {
+    max-height: 150px;
+}
+
+/* Empty State Placeholder Text Styling */
+.control-center-list-placeholder label {
+    color: #ebdbb2;
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+/* Hide empty state placeholder icon if present */
+.control-center-list-placeholder image {
+    opacity: 0;
+    -gtk-icon-effect: none;
+}
+/* 5. Notification Cards */
+.notification-background {
+    background: #000000;
+    border: 1px solid #8d0404;
+    border-radius: var(--border-radius);
+    margin: 3px 0;
+    padding: 8px 10px;
+}
+
+.notification-icon,
+.notification-group-icon {
+    display: none;
+}
+
+.notification-content .summary {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #8d0404;
+}
+
+.notification-content .body {
+    color: #8d0404;
+    font-size: 0.85rem;
+}
+
+.notification-content .time {
+    font-size: 0.8rem;
+    color: #928374;
+}
+
+.blank-window {
+    background: transparent;
+}
+
+/* --- MPRIS Widget Styling --- */
+
+.widget-mpris {
+    background: #000000;
+    padding: 12px 8px;
+    border-bottom: 1px solid #282828;
+}
+
+/* Force strip background image & GTK icon effects */
+.widget-mpris-player {
+    background-color: #000000;
+    background-image: none;
+    padding: 12px;
+    border: 1px solid #3c3836;
+    border-radius: 0px;
+}
+
+/* Track Metadata */
+.widget-mpris-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #61784b;
+}
+
+.widget-mpris-subtitle {
+    font-size: 0.85rem;
+    color: #d4be98;
+}
+
+/* Playback Control Buttons */
+.widget-mpris-buttons button {
+    color: #ebdbb2;
+    padding: 4px 8px;
+    margin: 2px;
+}
+
+/* Target the background layer directly */
+.mpris-background {
+    opacity: 0;
+    filter: brightness(0);
+    background-image: none;
+    background-color: #000000;
+}
+
+/* --- DND Widget Styling --- */
+
+.widget-dnd {
+    background: #000000;
+    padding: 10px 8px;
+    border-bottom: 1px solid #282828;
+}
+
+.widget-dnd > label {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #ebdbb2;
+}
+
+.widget-dnd switch {
+    background: #282828;
+    border: 1px solid #3c3836;
+    border-radius: 0px;
+}
+
+.widget-dnd switch:checked {
+    background: #8d0404;
+}
+
+/* --- Volume Slider Styling --- */
+
+.widget-volume {
+    background: #000000;
+    padding: 10px 8px;
+    border-bottom: 1px solid #282828;
+}
+
+.widget-volume label {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #ebdbb2;
+    margin-right: 8px;
+}
+
+/* Background trough/track */
+.widget-volume scale trough {
+    background: #282828;
+    border-radius: 0px;
+    min-height: 8px;
+}
+
+/* Filled active portion */
+.widget-volume scale highlight {
+    background: #8d0404;
+    border-radius: 0px;
+}
+
+/* Draggable handle */
+.widget-volume scale slider {
+    background: #ebdbb2;
+    border-radius: 0px;
+    min-width: 10px;
+    min-height: 10px;
+}
+
+/* --- Power Buttons Grid Styling --- */
+
+.widget-buttons-grid {
+    background: #000000;
+    padding: 10px 8px;
+    border-bottom: 1px solid #282828;
+}
+
+.widget-buttons-grid flowboxchild {
+    padding: 2px;
+}
+
+.widget-buttons-grid flowboxchild button {
+    background: #1d2021;
+    color: #ebdbb2;
+    border: 1px solid #3c3836;
+    border-radius: 0px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.widget-buttons-grid flowboxchild button:hover {
+    background: #8d0404;
+    color: #ffffff;
+    border-color: #8d0404;
+}

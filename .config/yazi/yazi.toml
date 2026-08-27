@@ -1,0 +1,28 @@
+[manager]
+ratio          = [1, 2, 4]
+sort_by        = "alphabetical"
+sort_sensitive = false
+sort_reverse   = false
+show_hidden    = true
+show_symlink   = true
+scrolloff      = 5
+
+[opener]
+image = [
+    { run = 'imv "$@"', orphan = true, desc = "Open Image" },
+]
+edit = [
+    { run = '${EDITOR:-nvim} "$@"', block = true, desc = "Edit" },
+]
+
+[open]
+rules = [
+    { mime = "image/*", use = "image" },
+]
+
+[plugin]
+preloaders = [
+    { mime = "image/*", run = "image" },
+    { mime = "video/*", run = "video" },
+    { mime = "application/pdf", run = "pdf" },
+]

@@ -1,0 +1,17 @@
+* {
+    /* Pure deep black background */
+    black:          #000000FF;
+    background:     #000000FF;
+    background-alt: #0B0B0BFF;
+    
+    /* Muted Phosphor / Terminal Green */
+    green2:         #228B22FF; /* Desaturated CRT green */
+    
+    /* Foreground / Text */
+    foreground:     #C0C0C0FF; /* Soft CRT phosphor white */
+    
+    /* Selection highlighting */
+    selected:       #152015FF; /* Extremely faint dark green tint for selection background */
+    urgent:         #8B0000FF;
+    active:         #005F00FF;
+}

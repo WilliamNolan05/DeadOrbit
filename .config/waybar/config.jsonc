@@ -1,0 +1,104 @@
+{
+    "layer": "top",
+    "position": "bottom",
+	"height": 35,
+    "modules-left": [
+        "custom/launcher",
+        "pulseaudio",
+        "cava"
+    ],
+    "modules-center": [
+		"custom/quote"
+    ],
+    "modules-right": [
+		"hyprland/workspaces",
+        "clock"
+    ],
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+"clock": {
+    "format": "{:%H:%M}",
+    // Triggers SwayNC when the mouse enters the clock area
+    "on-click": "swaync-client -t -sw"
+},
+    "clock#right": {
+        "format": "{:%M}"
+    },
+"hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+            "9": "IX",
+            "10": "X",
+            "urgent": "⚠",
+            "default": "·"
+        }
+},
+"pulseaudio": {
+	"format": "{icon}  {volume}%",
+	"format-bluetooth": " {volume}% ",
+	"format-muted": "",
+	"format-icons": {
+		"headphone": "",
+		"hands-free": "󰂑",
+		"headset": "󰂑",
+		"phone": "",
+		"phone-muted": "",
+		"portable": "",
+		"car": "",
+		"default": ["", ""]
+	},
+	"scroll-step": 1,
+	"on-click": "pavucontrol"
+},
+"cava": {
+	//"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+	"framerate": 30,
+	"autosens": 0,
+	"sensitivity": 3.75,
+	"bars": 30,
+	"lower_cutoff_freq": 50,
+	"higher_cutoff_freq": 10000,
+	"method": "pulse",
+	"source": "auto",
+	"stereo": true,
+	"reverse": false,
+	"bar_delimiter": 0,
+	"monstercat": false,
+	"waves": false,
+	"noise_reduction": 0.17,
+	"input_delay": 2,
+	"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+	"actions": {
+		"on-click-right": "mode"
+	}
+},
+
+/* --- ADD THIS NEW MODULE CONFIG --- */
+"custom/quote": {
+    "exec": "python3 ~/.config/waybar/glitch_quote.py",
+    "restart-interval": 15, /* Change this number to change the frequency of the quote change */
+    "tooltip": false
+},
+
+"custom/launcher": {
+    "format": "",
+    "on-click": "~/.config/rofi/type-4/launcher.sh",
+    "tooltip": false
+}
+}

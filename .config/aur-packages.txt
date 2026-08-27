@@ -1,0 +1,7 @@
+pipes.sh
+spotatui-bin
+spotify
+vscodium-bin
+waybar-cava-git
+yay
+yay-debug

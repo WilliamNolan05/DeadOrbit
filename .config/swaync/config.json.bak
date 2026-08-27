@@ -1,0 +1,77 @@
+{
+  "$schema": "/etc/xdg/swaync/configschema.json",
+  "positionX": "right",
+  "positionY": "bottom",
+  "cssPriority": "user",
+  "control-center-width": 450,
+  "control-center-height": 450,
+  "fit-to-screen": false,
+
+  "notification-window-width": 400,
+  "notification-icon-size": 0,
+  "notification-body-image-height": 0,
+  "notification-body-image-width": 0,
+  "notification-inline-replies": true,
+  "notification-2fa-action": false,
+
+  "timeout": 3,
+  "timeout-low": 2,
+  "timeout-critical": 6,
+  "hide-on-clear": false,
+  "hide-on-action": false,
+  "script-fail-notify": true,
+  "keyboard-shortcuts": true,
+  "image-visibility": "never",
+  "transition-time": 0,
+  "hide-on-clear": false,
+  "hide-on-action": false,
+  "script-fail-notify": true,
+
+  "widgets": [
+    "dnd",
+    "mpris",
+    "notifications",
+    "buttons-grid",
+    "calendar"
+  ],
+
+  "widget-config": {
+    "dnd": {
+      "text": "Do not disturb"
+    },
+    "mpris": {
+      "image-size": 80,
+      "image-radius": 0,
+      "autohide": false,
+      "blacklist": ["org.mpris.MediaPlayer2.playerctld"]
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "",
+          "type": "toggle",
+          "command": "$HOME/.local/bin/mictoggle --silent",
+          "update-command": "$HOME/.local/bin/mictoggle --is-muted"
+        },
+        {
+          "label": "",
+          "command": "$HOME/.config/swaync/scripts/htop"
+        },
+        {
+          "label": "󰃟",
+          "type": "toggle",
+          "command": "$HOME/.local/bin/themesw",
+          "update-command": "[ $($HOME/.local/bin/themesw --current) = light ] && echo true || echo false"
+        },
+        {
+          "label": "",
+          "command": "$HOME/.config/swaync/scripts/nwg-look"
+        },
+        {
+          "label": "",
+          "command": "swaync-client -cp ; $HOME/.config/rofi/bin/logout"
+        }
+      ]
+    }
+  }
+}

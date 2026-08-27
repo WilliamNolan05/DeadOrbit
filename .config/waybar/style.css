@@ -1,0 +1,104 @@
+@import "colors/gruvbox-material.css";
+
+* {  
+    all: unset;
+    font-family: "Terminus", monospace;
+    font-size: 1.2rem;
+}
+
+window#waybar {
+    background-color: @black;
+    color: @fg;
+    border-radius: 0 0 10px 10px;
+    border-radius: 0px;
+    border-top: 1px solid @border;
+    min-height: 34px;
+}
+
+#workspaces button {
+    background-color: @bg4;
+    color: @grey1; 
+    padding: 0px 10px; 
+    margin: 0 4px;
+    border: 1px solid @bg3; 
+    border-radius: 0px; 
+    font-weight: bold;
+}
+
+#workspaces button {
+    background-color: @black;
+    color: @grey1; 
+    /* Reduced vertical padding (2px) to make the blocks shorter, kept horizontal padding (10px) */
+    padding: 2px 10px; 
+    margin: 0 3px;
+    border: 1px solid @border; 
+    border-radius: 0px; 
+    font-weight: bold;
+    /* Ensures the text stays centered inside the shorter block */
+    min-height: 0px; 
+}
+
+#workspaces button.active {
+    background-color: @bg2; 
+    color: @green; 
+    border: 1px solid @green; 
+    /* Keeps the heavy bottom border contained nicely within the shorter block */
+    border-bottom: 2px solid @green; 
+    transition: none;
+}
+
+#workspaces button:hover {
+    background-color: @bg3;
+    color: @fg;
+    border: 1px solid @fg;
+}
+
+#clock {
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.modules-left {
+    margin-left: 12px;
+}
+
+.modules-right {
+    margin-left: 12px;
+}
+
+#cava {
+    padding: 0 12px;
+    border-right: 1px solid @border;
+    font-size: 0.8rem;
+    letter-spacing: 0px;
+}
+
+#custom-quote {
+    color: @matrix;
+    font-family: "Terminus", "VT323", monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0 15px;
+    margin: 0 10px;
+}
+
+#custom-launcher {
+    color: @matrix;
+    border-right: 1px solid @border;
+    margin: 0;
+    
+    /* Set equal width and height to force a square */
+    min-width: 32px;
+    
+    /* Center the Arch icon inside the square */
+    padding: 0;
+}
+
+#pulseaudio {
+    /* Full height vertical border to separate volume from cava/other modules */
+    border-right: 1px solid @border;
+    border-left: 1px solid @border;
+    padding: 0 8px;
+}
