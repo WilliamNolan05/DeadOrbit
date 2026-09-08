@@ -1,22 +1,2 @@
-The Matrix has you ...
-Vector locked in
-Oh it's on
-System functions: operational
-First comes then rain, then the rainbow
-Is a man not entitled, to the sweat of his brow?
-Born to serve
-Upgrade complete
-Be kind.
-Love you Nimmer
-My life for Aiur
-Entaro Tassadar
-Goliath Online
-Make me Tea
-Hello Meegan
-Burger king I miss you
-My name is Conan and I smell bad
-I'M GONNA EXPLODE YOU WITH MY MIND!
-SAMPLE TEXT
-Why am I blue???
-Crushing crazy pussy into oblivion
-Hello my name is  William Arthuer Nolan welcome to EE mobile billnig services
+To add quotes: 
+Modify .config/waybar/quotes.txt 
