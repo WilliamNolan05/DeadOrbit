@@ -2,7 +2,7 @@ if status is-interactive
     # Hide default Fish welcome message
     set -g fish_greeting ""
 
-    set -gx HYPRSHOT_DIR "$HOME/Pictures/Screenshots"
+    set -gx HYPRSHOT_DIR "$HOME/Images/screenshots"
 
     fastfetch
     
