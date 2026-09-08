@@ -42,3 +42,4 @@ wofi
 xdg-desktop-portal-hyprland
 yazi
 zoxide
+awww
