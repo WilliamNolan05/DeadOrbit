@@ -27,7 +27,7 @@ Install.
 ### GIT 
 sudo pacman -S git
 
-git clone https://WilliamNolan05/DeadOrbit.git
+git clone https://github.com/WilliamNolan05/DeadOrbit.git
 
 cd DeadOrbit 
 
