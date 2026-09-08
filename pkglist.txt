@@ -35,7 +35,6 @@ tree
 ttf-jetbrains-mono-nerd
 ttf-terminus-nerd
 ueberzugpp
-vifm
 vim
 wireplumber
 wofi
