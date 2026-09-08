@@ -34,4 +34,6 @@ echo "==> Enabling seatd (needed for Hyprland to access GPU/input without a disp
 sudo systemctl enable --now seatd
 sudo usermod -aG seat,video,render "$USER"
 
+sudo chsh -s $(which fish) $USER
+
 echo "==> Done. Reboot and select Hyprland at your display manager."
