@@ -1,1 +1,2 @@
 waybar-cava-git
+seatd
