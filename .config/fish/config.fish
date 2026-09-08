@@ -1,4 +1,8 @@
 if status is-interactive
+
+    if test -z "$DISPLAY" -a (tty) = "/dev/tty1"
+        exec start-hyprland
+    end
     # Hide default Fish welcome message
     set -g fish_greeting ""
 
