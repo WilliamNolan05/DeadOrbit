@@ -21,7 +21,7 @@ if ! command -v yay &>/dev/null; then
 fi
 
 echo "==> Installing AUR packages"
-yay -S --needed --noconfirm - < "$REPO_DIR/aur-pkglist.txt"
+yay -S --needed --noconfirm - < "$REPO_DIR/aurpkglist.txt"
 
 echo "==> Copying configs into place"
 cp -r "$REPO_DIR/.config/." "$HOME/.config/"
