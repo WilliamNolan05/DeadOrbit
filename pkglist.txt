@@ -1,6 +1,5 @@
 7zip
 alsa-utils
-awww
 btop
 cava
 fastfetch
@@ -9,6 +8,7 @@ ffmpegthumbnailer
 firefox
 fish
 fzf
+gpsd
 hyprland
 hyprlock
 hyprpaper
@@ -26,6 +26,7 @@ qt6-wayland
 resvg
 ripgrep
 rofi
+seatd
 sl
 starship
 swaync
