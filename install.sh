@@ -26,9 +26,9 @@ yay -S --needed --noconfirm - < "$REPO_DIR/aurpkglist.txt"
 echo "==> Copying configs into place"
 cp -r "$REPO_DIR/.config/." "$HOME/.config/"
 
-mkdir -p "$HOME/Pictures/wallpapers" && cp "$REPO_DIR/wallpapers/background.png" "$HOME/Pictures/wallpapers/"
+mkdir -p "$HOME/Images/wallpapers" && cp "$REPO_DIR/wallpapers/background.png" "$HOME/Images/wallpapers/"
 
-mkdir "$HOME/Pictures/screenshots"
+mkdir "$HOME/Images/screenshots"
 
 echo "==> Enabling seatd (needed for Hyprland to access GPU/input without a display manager)"
 sudo systemctl enable --now seatd
