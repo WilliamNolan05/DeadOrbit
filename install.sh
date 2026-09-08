@@ -36,4 +36,4 @@ sudo usermod -aG seat,video,render "$USER"
 
 sudo chsh -s $(which fish) $USER
 
-echo "==> Done. Reboot and select Hyprland at your display manager."
+echo "==> Done. Please reboot"
