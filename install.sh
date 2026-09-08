@@ -26,4 +26,6 @@ yay -S --needed --noconfirm - < "$REPO_DIR/aurpkglist.txt"
 echo "==> Copying configs into place"
 cp -r "$REPO_DIR/.config/." "$HOME/.config/"
 
+mkdir -p "$HOME/Pictures/wallpapers" && cp "$REPO_DIR/wallpapers/background.png" "$HOME/Pictures/wallpapers/"
+
 echo "==> Done. Reboot and select Hyprland at your display manager."
